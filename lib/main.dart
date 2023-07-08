@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
             elevatedButtonTheme: ElevatedButtonThemeData(
               style: ButtonStyle(
                 padding: MaterialStatePropertyAll(
-                  EdgeInsets.symmetric(horizontal: 6.h, vertical: 2.h),
+                  EdgeInsets.symmetric(horizontal: 6.h, vertical: 1.5.h),
                 ),
                 foregroundColor: const MaterialStatePropertyAll(Colors.black),
                 backgroundColor: const MaterialStatePropertyAll(Colors.white),
@@ -44,6 +44,10 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            dialogTheme: const DialogTheme(
+              surfaceTintColor: Colors.black,
+              backgroundColor: Colors.black,
             ),
             textButtonTheme: const TextButtonThemeData(
               style: ButtonStyle(
