@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:oasis/presentation/pages/extension/detail.screen.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../widgets/custom.text.dart';
+import '../../widgets/fade.effect.dart';
+import '../../widgets/image.hover.dart';
 
 class HomeTab extends StatefulWidget {
   const HomeTab({super.key});
@@ -110,12 +111,75 @@ class _HomeTabState extends State<HomeTab> {
                         onEnter: (v) {},
                         child: InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (ctx) => DetailScreen(
-                                    imagePath:
-                                        'assets/images/top${index + 1}.jpg'),
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (ctx) => DetailScreen(
+                            //         imagePath:
+                            //             'assets/images/top${index + 1}.jpg'),
+                            //   ),
+                            // );
+                            showDialog(
+                              context: context,
+                              builder: (ctx) => Dialog(
+                                clipBehavior: Clip.hardEdge,
+                                child: Column(
+                                  children: [
+                                    Stack(
+                                      children: [
+                                        Hero(
+                                          tag:
+                                              'assets/images/top${index + 1}.jpg',
+                                          child: Image.asset(
+                                            'assets/images/top${index + 1}.jpg',
+                                            height: 40.h,
+                                            width: MediaQuery.sizeOf(context)
+                                                    .width *
+                                                0.7,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 0,
+                                          left: 0,
+                                          right: 0,
+                                          child: CustomPaint(
+                                            foregroundPainter: FadingEffect(),
+                                            child: SizedBox(
+                                              height: 6.h,
+                                              width: MediaQuery.sizeOf(context)
+                                                      .width *
+                                                  0.7,
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          bottom: 2.h,
+                                          left: 2.h,
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              CustomText(
+                                                'Marc Aaron Abanggo',
+                                                size: 18.sp,
+                                              ),
+                                              ElevatedButton.icon(
+                                                onPressed: () {},
+                                                icon: const Icon(
+                                                    Icons.play_arrow),
+                                                label: CustomText(
+                                                  'Resume',
+                                                  size: 14.sp,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           },
@@ -123,11 +187,13 @@ class _HomeTabState extends State<HomeTab> {
                             borderRadius: BorderRadius.circular(8),
                             child: Hero(
                               tag: 'assets/images/top${index + 1}.jpg',
-                              child: Image.asset(
-                                'assets/images/top${index + 1}.jpg',
-                                height: isMobile ? 22.h : 20.h,
-                                width: isMobile ? 32.w : 25.w,
-                                fit: BoxFit.cover,
+                              child: ImageHover(
+                                child: Image.asset(
+                                  'assets/images/top${index + 1}.jpg',
+                                  height: isMobile ? 22.h : 20.h,
+                                  width: isMobile ? 32.w : 25.w,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
