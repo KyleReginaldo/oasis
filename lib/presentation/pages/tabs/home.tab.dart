@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:oasis/presentation/pages/extension/detail.screen.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../widgets/custom.text.dart';
@@ -48,7 +49,7 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                   CustomText(
                     'In the realm of digital storytelling, a dynamic group of girls and boys unites to create a captivating movie website. Their collaboration breathes life into pixels, weaving an immersive experience that embraces the magic of cinema. Together, they transform their shared vision into a digital masterpiece, inspiring audiences one click at a time.',
-                    size: 15.sp,
+                    size: 13.sp,
                   ),
                   SizedBox(height: 1.h),
                   Row(
@@ -106,11 +107,30 @@ class _HomeTabState extends State<HomeTab> {
                         bottom: 1.h,
                       ),
                       child: MouseRegion(
-                        child: Image.asset(
-                          'assets/images/ph1.jpg',
-                          height: isMobile ? 22.h : 20.h,
-                          width: isMobile ? 18.h : 28.h,
-                          fit: BoxFit.cover,
+                        onEnter: (v) {},
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (ctx) => DetailScreen(
+                                    imagePath:
+                                        'assets/images/top${index + 1}.jpg'),
+                              ),
+                            );
+                          },
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: Hero(
+                              tag: 'assets/images/top${index + 1}.jpg',
+                              child: Image.asset(
+                                'assets/images/top${index + 1}.jpg',
+                                height: isMobile ? 22.h : 20.h,
+                                width: isMobile ? 32.w : 25.w,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -143,7 +163,7 @@ class _HomeTabState extends State<HomeTab> {
                       child: Image.asset(
                         'assets/images/ph1.jpg',
                         height: isMobile ? 22.h : 20.h,
-                        width: isMobile ? 18.h : 28.h,
+                        width: isMobile ? 15.w : 18.w,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -176,7 +196,7 @@ class _HomeTabState extends State<HomeTab> {
                       child: Image.asset(
                         'assets/images/ph1.jpg',
                         height: isMobile ? 22.h : 20.h,
-                        width: isMobile ? 18.h : 28.h,
+                        width: isMobile ? 15.w : 18.w,
                         fit: BoxFit.cover,
                       ),
                     ),
