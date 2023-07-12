@@ -12,13 +12,9 @@ class NavBarCubit extends Cubit<NavBarState> {
       case 1:
         emit(Gallery());
       case 2:
-        emit(Education());
-      case 3:
-        emit(Hobbies());
-      case 4:
         emit(Schedule());
-      case 5:
-        emit(Resume());
+      case 3:
+        emit(About());
     }
   }
 }

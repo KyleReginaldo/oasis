@@ -16,13 +16,14 @@ class _ImageHoverState extends State<ImageHover> {
   bool isHovered = false;
   @override
   Widget build(BuildContext context) {
-    final hoveredTransform = Matrix4.identity()..scale(1.2);
+    final hoveredTransform = Matrix4.identity()..scale(1.1);
     final transform = isHovered ? hoveredTransform : Matrix4.identity();
     return MouseRegion(
       onEnter: (event) => onEntered(true),
       onExit: (event) => onEntered(false),
       child: AnimatedContainer(
         decoration: BoxDecoration(
+          color: Colors.grey,
           borderRadius: BorderRadius.circular(0),
         ),
         duration: const Duration(milliseconds: 200),

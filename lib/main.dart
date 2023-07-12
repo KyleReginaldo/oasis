@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:oasis/core/constants/constants.dart';
 import 'package:oasis/presentation/pages/main.screen.dart';
+import 'package:oasis/presentation/state/cubit/hover_person_cubit.dart';
 import 'package:oasis/presentation/state/cubit/nav_bar_cubit.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -19,11 +20,12 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'Oasis-development',
           theme: ThemeData(
+            scaffoldBackgroundColor: Colors.black,
             primaryColor: PRIMARY_COLOR,
             brightness: Brightness.dark,
             fontFamily: 'NeflixSans',
             colorScheme: ColorScheme.fromSeed(
-              seedColor: Colors.deepPurple,
+              seedColor: PRIMARY_COLOR,
               brightness: Brightness.dark,
             ),
             useMaterial3: true,
@@ -56,8 +58,15 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-          home: BlocProvider(
-            create: (ctx) => NavBarCubit(),
+          home: MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (ctx) => NavBarCubit(),
+              ),
+              BlocProvider(
+                create: (context) => HoverPersonCubit(),
+              ),
+            ],
             child: const MainScreen(),
           ),
         );
