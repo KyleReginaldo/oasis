@@ -4,6 +4,8 @@ import 'package:oasis/core/constants/strings.dart';
 import 'package:oasis/presentation/widgets/custom.text.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
+import '../../widgets/image.hover.dart';
+
 class GalleryTab extends StatelessWidget {
   const GalleryTab({super.key});
 
@@ -34,11 +36,13 @@ class GalleryTab extends StatelessWidget {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(
-                              e,
-                              width: MediaQuery.sizeOf(context).width * 0.19,
-                              height: 20.h,
-                              fit: BoxFit.cover,
+                            child: ImageHover(
+                              child: Image.asset(
+                                e,
+                                width: MediaQuery.sizeOf(context).width * 0.14,
+                                height: 32.h,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           Positioned(
@@ -82,11 +86,13 @@ class GalleryTab extends StatelessWidget {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(
-                              e,
-                              width: MediaQuery.sizeOf(context).width * 0.19,
-                              height: 20.h,
-                              fit: BoxFit.cover,
+                            child: ImageHover(
+                              child: Image.asset(
+                                e,
+                                width: MediaQuery.sizeOf(context).width * 0.14,
+                                height: 32.h,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           Positioned(
@@ -106,7 +112,7 @@ class GalleryTab extends StatelessWidget {
                               ),
                               alignment: Alignment.center,
                               child: CustomText(
-                                '${5 + second.indexOf(e) + 1}',
+                                '${8 + second.indexOf(e) + 1}',
                                 weight: FontWeight.bold,
                                 size: 12.sp,
                               ),
@@ -130,11 +136,13 @@ class GalleryTab extends StatelessWidget {
                         children: [
                           ClipRRect(
                             borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(
-                              e,
-                              width: MediaQuery.sizeOf(context).width * 0.19,
-                              height: 20.h,
-                              fit: BoxFit.cover,
+                            child: ImageHover(
+                              child: Image.asset(
+                                e,
+                                width: MediaQuery.sizeOf(context).width * 0.14,
+                                height: 32.h,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                           Positioned(
@@ -154,103 +162,7 @@ class GalleryTab extends StatelessWidget {
                               ),
                               alignment: Alignment.center,
                               child: CustomText(
-                                '${10 + third.indexOf(e) + 1}',
-                                weight: FontWeight.bold,
-                                size: 12.sp,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }).toList(),
-                ),
-              ),
-              SizedBox(height: 6.h),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: fourth.map((e) {
-                    return Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 0.2.h),
-                      child: Stack(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(
-                              e,
-                              width: MediaQuery.sizeOf(context).width * 0.19,
-                              height: 20.h,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Positioned(
-                            top: 0,
-                            right: 0,
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                color: PRIMARY_COLOR,
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(8),
-                                  topRight: Radius.circular(8),
-                                ),
-                              ),
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 2.h,
-                                vertical: 0.5.h,
-                              ),
-                              alignment: Alignment.center,
-                              child: CustomText(
-                                '${15 + fourth.indexOf(e) + 1}',
-                                weight: FontWeight.bold,
-                                size: 12.sp,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }).toList(),
-                ),
-              ),
-              SizedBox(height: 6.h),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: fifth.map((e) {
-                    return Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 0.2.h),
-                      child: Stack(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: Image.asset(
-                              e,
-                              width: MediaQuery.sizeOf(context).width * 0.19,
-                              height: 20.h,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Positioned(
-                            top: 0,
-                            right: 0,
-                            child: Container(
-                              decoration: const BoxDecoration(
-                                color: PRIMARY_COLOR,
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(8),
-                                  topRight: Radius.circular(8),
-                                ),
-                              ),
-                              padding: EdgeInsets.symmetric(
-                                horizontal: 2.h,
-                                vertical: 0.5.h,
-                              ),
-                              alignment: Alignment.center,
-                              child: CustomText(
-                                '${20 + fifth.indexOf(e) + 1}',
+                                '${16 + third.indexOf(e) + 1}',
                                 weight: FontWeight.bold,
                                 size: 12.sp,
                               ),

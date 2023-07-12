@@ -50,16 +50,13 @@ class _HomeTabState extends State<HomeTab> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  SizedBox(height: 16.h),
                   CustomText(
-                    'The\nOASIS',
+                    'EPOCH',
                     size: 30.sp,
                     textAlign: TextAlign.end,
                     weight: FontWeight.w500,
-                  )
-                      .animate()
-                      .fadeIn(duration: 400.ms)
-                      .then(delay: 100.ms) // baseline=800ms
-                      .slide(),
+                  ).animate().fadeIn(delay: 500.ms),
                   CustomText(
                     'In the realm of digital storytelling, a dynamic group of girls and boys unites to create a captivating movie website. Their collaboration breathes life into pixels, weaving an immersive experience that embraces the magic of cinema. Together, they transform their shared vision into a digital masterpiece, inspiring audiences one click at a time.',
                     size: 13.sp,

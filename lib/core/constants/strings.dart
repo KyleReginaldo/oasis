@@ -177,34 +177,29 @@ List<String> first = [
   '${BASE_IMAGE_PATH}3.jpg',
   '${BASE_IMAGE_PATH}4.jpg',
   '${BASE_IMAGE_PATH}5.jpg',
-];
-List<String> second = [
   '${BASE_IMAGE_PATH}6.jpg',
   '${BASE_IMAGE_PATH}7.jpg',
   '${BASE_IMAGE_PATH}8.jpg',
+];
+List<String> second = [
   '${BASE_IMAGE_PATH}9.jpeg',
   '${BASE_IMAGE_PATH}10.jpeg',
-];
-List<String> third = [
   '${BASE_IMAGE_PATH}11.jpg',
   '${BASE_IMAGE_PATH}12.jpg',
   '${BASE_IMAGE_PATH}13.jpg',
   '${BASE_IMAGE_PATH}14.jpg',
   '${BASE_IMAGE_PATH}15.jpg',
-];
-List<String> fourth = [
   '${BASE_IMAGE_PATH}16.jpg',
+];
+List<String> third = [
   '${BASE_IMAGE_PATH}17.jpg',
   '${BASE_IMAGE_PATH}18.jpg',
   '${BASE_IMAGE_PATH}19.jpg',
   '${BASE_IMAGE_PATH}20.jpg',
-];
-List<String> fifth = [
   '${BASE_IMAGE_PATH}21.jpg',
   '${BASE_IMAGE_PATH}22.jpg',
   '${BASE_IMAGE_PATH}23.jpg',
   '${BASE_IMAGE_PATH}24.jpg',
-  '${BASE_IMAGE_PATH}25.jpg',
 ];
 
 List<String> scheds1 = [
@@ -213,9 +208,11 @@ List<String> scheds1 = [
   '${BASE_IMAGE_PATH}monday3.jpg',
   '${BASE_IMAGE_PATH}monday4.jpg',
   '${BASE_IMAGE_PATH}monday5.jpg',
-  '${BASE_IMAGE_PATH}thursday1.jpg',
+  '${BASE_IMAGE_PATH}tuesday1.jpg',
+  '${BASE_IMAGE_PATH}wednesday1.jpg',
 ];
 List<String> scheds2 = [
+  '${BASE_IMAGE_PATH}thursday1.jpg',
   '${BASE_IMAGE_PATH}thursday2.jpg',
   '${BASE_IMAGE_PATH}thursday3.jpg',
   '${BASE_IMAGE_PATH}friday1.jpg',
@@ -230,9 +227,11 @@ List<String> schedStrings = [
   'MONDAY\nGNED 01',
   'MONDAY\nVACANT',
   'MONDAY\nVACANT',
-  'THURSDAY\nDCIT 23',
+  'TUESDAY\nNO CLASSES',
+  'WEDNESDAY\nNO CLASSES',
 ];
 List<String> schedStrings2 = [
+  'THURSDAY\nDCIT 23',
   'THURSDAY\nDCIT 23',
   'THURSDAY\nITEC 50',
   'FRIDAY\nNSTP 2',
@@ -247,5 +246,25 @@ List<String> pdfs = [
   'assets/pdf/ayura.pdf',
   'assets/pdf/norly.pdf',
   'assets/pdf/cedrique.pdf',
+];
+
+List<String> times1 = [
+  '1:00 pm - 3:00 pm',
+  '3:00 pm - 5:00 pm',
+  '5:00 pm - 7:00 pm',
+  '',
+  '',
+  '',
+  '',
+];
+
+List<String> times2 = [
+  '7:00 am - 12:00 pm',
+  '12:00 pm - 1:00 pm',
+  '4:00 pm - 7:00 pm',
+  '7:00 am - 12:00 pm',
+  '7:00 am - 9:00 am',
+  '9:00 am - 11:00 am',
+  '11:00 am - 1:00 pm',
 ];
 const BASE_IMAGE_PATH = 'assets/images/';

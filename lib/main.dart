@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
     return ResponsiveSizer(
       builder: (p0, p1, p2) {
         return MaterialApp(
-          title: 'Oasis-development',
+          debugShowCheckedModeBanner: false,
+          title: 'Epoch Ciphers',
           theme: ThemeData(
             scaffoldBackgroundColor: Colors.black,
             primaryColor: PRIMARY_COLOR,
